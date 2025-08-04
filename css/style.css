@@ -205,6 +205,11 @@ ul {
   margin: 0 15px 15px auto;
   transition: 0.3s;
 }
+@media (max-width: 767px) {
+  .welcome .visit {
+    margin: 0 auto 20px auto;
+  }
+}
 .welcome .visit:hover {
   background-color: var(--blue-alt-color);
 }
@@ -229,6 +234,11 @@ ul {
   margin-left: auto;
   transition: 0.3s;
   cursor: pointer;
+}
+@media (max-width: 767px) {
+  .quick-draft .save {
+    margin: 0 auto;
+  }
 }
 .quick-draft .save:hover {
   background-color: var(--blue-alt-color);
@@ -757,18 +767,24 @@ ul {
   left: 50px;
   color: var(--blue-color);
 }
-/* end toggle */
-/* start animation */
-@keyframes change-color {
-  from {
-    background-color: var(--blue-color);
+@media (max-width: 767px) {
+  .settings-page .toggle-switch {
+    width: 50px;
+    height: 20px;
+    border-radius: 10px;
   }
-  to {
-    background-color: #fff;
+  .settings-page .toggle-switch::before {
+    width: 12px;
+    height: 12px;
+    top: 4px;
+    left: 4px;
+    font-size: 10px;
+  }
+  .settings-page .toggle-checkbox:checked + .toggle-switch::before {
+    left: 34px;
   }
 }
-/* end animation */
-
+/* end toggle */
 .settings-page :disabled {
   cursor: no-drop;
   background-color: #f0f4f8;
@@ -817,6 +833,11 @@ ul {
   flex-wrap: wrap;
   border-bottom: 1px solid #eee;
   transition: 0.3s;
+}
+@media (max-width: 767px) {
+  .profile-page .info-box .box {
+    justify-content: center;
+  }
 }
 .profile-page .info-box .box:hover {
   background-color: #f9f9f9;
@@ -915,7 +936,7 @@ ul {
 }
 @media (max-width: 767px) {
   .projects-page {
-    grid-template-columns: minmax(500, 1fr);
+    grid-template-columns: minmax(200px, 1fr);
     margin-left: 10px;
     margin-right: 10px;
     gap: 10px;
@@ -998,6 +1019,11 @@ ul {
 }
 @media (max-width: 767px) {
   .projects-page .project .prog {
+    width: 200px;
+  }
+}
+@media (max-width: 767px) {
+  .projects-page .project .prog {
     margin-bottom: 15px;
   }
 }
@@ -1053,11 +1079,11 @@ ul {
 /* end courses-page */
 /* start friends-page */
 .friends-page {
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 @media (max-width: 767px) {
   .friends-page {
-    grid-template-columns: minmax(500, 1fr);
+    grid-template-columns: minmax(200px, 1fr);
     margin-left: 10px;
     margin-right: 10px;
     gap: 10px;
@@ -1100,6 +1126,19 @@ ul {
   font-size: 40px;
   opacity: 0.2;
 }
+@media (max-width: 767px) {
+  .friends-page .friend .info {
+    flex-direction: column;
+  }
+  .friends-page .friend .btns-friend a {
+    display: block;
+  }
+  .friends-page .friend .btns-friend a:first-child {
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+}
+
 /* end friends-page */
 /*  start files-page */
 /*start files-stats */
